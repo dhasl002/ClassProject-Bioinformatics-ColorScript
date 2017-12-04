@@ -16,9 +16,6 @@ noRepeat = int(sys.argv[2])
 with open(path) as inf:
   for line in inf:
     AA1, AA2, trash1, trash2, trash3 = line.strip().split(",")
-    Midas.color(colors[it], sel=':' + str(AA1))
-    Midas.color(colors[it], sel=':' + str(AA2))
-    it = it + 1
     next(inf)
     
     if it == 38:
@@ -34,6 +31,8 @@ with open(path) as inf:
       
       if breakVar == 1:
         break
-    
+    Midas.color(colors[it], sel=':' + str(AA1))
+    Midas.color(colors[it], sel=':' + str(AA2))
+    it = it + 1
     AAList.append(AA1)
     AAList.append(AA2)
